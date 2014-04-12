@@ -3,19 +3,13 @@ Trapifier.py
 
 This is a script for turning boring, regular sound files into CERTIFIED TRAP BANGERS by overdubbing a variety of samples.  Have you ever wished that boring old Sufjan Stevens track had about 500% more foghorn?  Consider your wish granted.
 
-Example
--------
-
-Original: https://www.youtube.com/watch?v=W6H8WcTPnWM
-
-Trapified: https://soundcloud.com/japesinator/trapified  <- Temporarily taken down for "plagiarism"
 
 Requirements
 ------------
 
 This program uses python, so make sure you have that installed.  Pretty much any version should work.  It also uses [pydub](http://pydub.com/) for most of the audio processing.  `pip install pydub` works, and so does cloning the git repository.
 
-I don't think this will work on Windows.  I do not actually have a Windows box to test on at this moment.  If you can confirm whether or not it works, please let me know.  If you can fork the repo and make it work for Windows, that would be really cool.
+In order to use pydub make sure to have [ffmpeg](http://www.ffmpeg.org/) installed and the binary linked in the os path variable
 
 Installation
 ------------
