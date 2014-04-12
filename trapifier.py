@@ -3,6 +3,7 @@ import pydub
 import random
 import argparse
 import os
+from distutils import spawn
 
 # Take command-line arguments for input and output files
 # (And maybe directory to sample from)
@@ -25,6 +26,13 @@ def extension(file):
 
 # Turn arguments into variables
 def parse():
+    # Check that ffmpeg is installed
+    ffmpeg_path = spawn.find_executable("ffmpeg")
+    if (None != ffmpeg_path):
+        pydub.AudioSegment.converter  = ffmpeg_path
+    else:
+        raise NameError("Please ensure that ffmpeg is installed and added to the path")
+
     # Interpret the input file based on its codec
     if extension(inputfile) == ".wav":
         base_track = pydub.AudioSegment.from_wav(inputfile)
@@ -36,6 +44,9 @@ def parse():
         base_track = pydub.AudioSegment.from_flv(inputfile)
     else:
         raise NameError("Please use a .wav, .mp3, .ogg, or .flv file as input")
+
+    
+
 
     # Check if we're using custom samples
     if args.samples:
