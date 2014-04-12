@@ -28,10 +28,10 @@ TODO
 
 *   Allow installation via pip
 
-*   Make things work on Windows
-
 Acknowledgements
 ----------------
+
+Forked from [Here](https://github.com/japesinator) 
 
 This program was inspired by [this reddit thread](http://www.reddit.com/r/hiphopheads/comments/1vxdag/guys_i_need_a_favor/).  The samples used are from [this person on reddit](http://www.reddit.com/r/DJs/comments/1vhaez/sample_pack_not_sure_if_anyone_is_interested_but/).
 
